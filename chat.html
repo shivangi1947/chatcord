@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>ChatCord App</title>
+  </head>
+  <body>
+    <div class="chat-container">
+      <header class="chat-header">
+        <h1><i class="fas fa-smile"></i> ChatCord</h1>
+        <!-- Add a button for video call here (optional) -->
+        <button id="video-call-btn" class="btn">Video Call</button>
+      </header>
+
+      <main class="chat-main">
+        <!-- Chat Sidebar -->
+        <div class="chat-sidebar">
+          <h2>Room Name: <span id="room-name">JavaScript</span></h2>
+          <h3>Users:</h3>
+          <ul id="users-list">
+            <li>User1</li>
+            <li>User2</li>
+          </ul>
+        </div>
+
+        <!-- Chat Messages and Input -->
+        <div class="chat-messages" id="messages-container">
+          <!-- Messages will be dynamically inserted here -->
+        </div>
+
+        <!-- Chat Form -->
+        <div class="chat-form-container">
+          <form>
+            <input type="text" id="msg-input" placeholder="Type a message..." />
+            <button type="submit" class="btn">Send</button>
+          </form>
+        </div>
+      </main>
+
+      <!-- Video Call Section -->
+      <div class="video-container">
+        <video id="local-video" autoplay muted playsinline></video>
+        <video id="remote-video" autoplay playsinline></video>
+      </div>
+      <button id="start-call-btn" class="btn" style="display: none;">Start Video Call</button>
+      <button id="end-call-btn" class="btn" style="display: none;">End Call</button>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
